@@ -115,46 +115,103 @@ const Hero: React.FC = () => {
           {/* Floating card: Projects */}
           <motion.div
             animate={floatAnim.animate}
-            className="absolute -left-4 lg:-left-12 top-8 z-20 bg-[#08142f]/90 backdrop-blur-md border border-[#2563eb]/30 rounded-2xl p-4 shadow-xl shadow-blue-500/10"
+            className="
+              absolute
+              left-0 top-2
+              sm:left-0 sm:top-8
+              lg:-left-12 lg:top-8
+              z-20
+              bg-[#08142f]/90
+              backdrop-blur-md
+              border border-[#2563eb]/30
+              rounded-2xl
+              p-2 sm:p-3 lg:p-4
+              shadow-xl shadow-blue-500/10
+          "
           >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#2563eb]/20 flex items-center justify-center">
-                <Award size={20} className="text-[#2563eb]" />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#2563eb]/20 flex items-center justify-center">
+                <Award size={16} className="text-[#2563eb] sm:w-5 sm:h-5" />
               </div>
+
               <div>
-                <p className="text-white font-bold text-lg leading-none"><Counter target={550} suffix="+" /></p>
-                <p className="text-[#94a3b8] text-xs mt-0.5">Projects Completed</p>
+                <p className="text-white font-bold text-base sm:text-lg leading-none">
+                  <Counter target={550} suffix="+" />
+                </p>
+                <p className="text-[#94a3b8] text-[10px] sm:text-xs mt-0.5">
+                  Projects Completed
+                </p>
               </div>
             </div>
           </motion.div>
 
           {/* Floating card: Clients */}
           <motion.div
-            animate={{ y: [0, 10, 0], transition: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 } }}
-            className="absolute -right-4 lg:-right-8 bottom-16 z-20 bg-[#08142f]/90 backdrop-blur-md border border-[#facc15]/30 rounded-2xl p-4 shadow-xl shadow-yellow-500/10"
+            animate={{
+              y: [0, 10, 0],
+              transition: {
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              },
+            }}
+         className="absolute right-0 bottom-4 sm:right-2 sm:bottom-8 lg:-right-8 lg:bottom-16 z-20 bg-[#08142f]/90 backdrop-blur-md border border-[#facc15]/30 rounded-2xl p-2 sm:p-3 lg:p-4 shadow-xl shadow-yellow-500/10"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#facc15]/15 flex items-center justify-center">
-                <Users size={20} className="text-[#facc15]" />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#facc15]/15 flex items-center justify-center">
+                <Users size={16} className="text-[#facc15] sm:w-5 sm:h-5" />
               </div>
+
               <div>
-                <p className="text-white font-bold text-lg leading-none"><Counter target={100} suffix="+" /></p>
-                <p className="text-[#94a3b8] text-xs mt-0.5">Happy Clients</p>
+                <p className="text-white font-bold text-base sm:text-lg leading-none">
+                  <Counter target={100} suffix="+" />
+                </p>
+                <p className="text-[#94a3b8] text-[10px] sm:text-xs mt-0.5">
+                  Happy Clients
+                </p>
               </div>
             </div>
           </motion.div>
 
           {/* Floating card: Growth */}
-          <motion.div
-            animate={{ y: [0, -8, 0], transition: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 } }}
-            className="absolute right-0 lg:right-4 top-4 z-20 bg-[#08142f]/90 backdrop-blur-md border border-green-500/30 rounded-2xl px-4 py-3 shadow-xl"
-          >
-            <div className="flex items-center gap-2">
-              <TrendingUp size={16} className="text-green-400" />
-              <span className="text-green-400 font-bold text-sm">+320% Traffic</span>
-            </div>
-            <p className="text-[#94a3b8] text-xs mt-0.5">Average client growth</p>
-          </motion.div>
+<motion.div
+  animate={{
+    y: [0, -8, 0],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay: 1,
+    },
+  }}
+  className="
+    absolute
+    right-0 top-0
+    sm:right-2 sm:top-4
+    lg:right-4 lg:top-4
+    z-20
+    bg-[#08142f]/90
+    backdrop-blur-md
+    border border-green-500/30
+    rounded-2xl
+    px-2 py-2
+    sm:px-3 sm:py-2
+    lg:px-4 lg:py-3
+    shadow-xl
+  "
+>
+  <div className="flex items-center gap-2">
+    <TrendingUp size={14} className="text-green-400 sm:w-4 sm:h-4" />
+    <span className="text-green-400 font-bold text-xs sm:text-sm">
+      +320% Traffic
+    </span>
+  </div>
+
+  <p className="text-[#94a3b8] text-[10px] sm:text-xs mt-0.5">
+    Average client growth
+  </p>
+</motion.div>
         </div>
       </div>
     </section>

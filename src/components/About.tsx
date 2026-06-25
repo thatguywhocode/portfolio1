@@ -26,7 +26,7 @@ const fadeUp = {
 const About: React.FC = () => {
   return (
     <section id="about" className="bg-[#020617] py-20 lg:py-28 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#2563eb]/8 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-4 w-96 h-96 bg-[#2563eb]/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Left image */}
@@ -48,26 +48,33 @@ const About: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent" />
           </div>
 
-          {/* Floating experience badge */}
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -right-4 lg:-right-8 top-12 bg-[#08142f]/95 backdrop-blur-md border border-[#2563eb]/30 rounded-2xl p-5 shadow-xl shadow-blue-500/10"
-          >
-            <p className="text-[#facc15] font-bold text-3xl">7+</p>
-            <p className="text-[#94a3b8] text-sm mt-1">Years of<br />Experience</p>
-          </motion.div>
+{/* Floating experience badge */}
+<motion.div
+  animate={{ y: [0, -8, 0] }}
+  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+className="absolute right-0 top-6 sm:right-2 sm:top-8 lg:-right-4 lg:top-10 z-20 bg-[#08142f]/95 backdrop-blur-md border border-[#2563eb]/30 rounded-2xl p-3 sm:p-4 lg:p-5 shadow-xl shadow-blue-500/10">
+  <p className="text-[#facc15] font-bold text-2xl sm:text-3xl">7+</p>
+  <p className="text-[#94a3b8] text-xs sm:text-sm mt-1">
+    Years of
+    <br />
+    Experience
+  </p>
+</motion.div>
 
-          {/* Floating award badge */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-            className="absolute -left-4 lg:-left-8 bottom-12 bg-[#08142f]/95 backdrop-blur-md border border-[#facc15]/20 rounded-2xl p-4 shadow-xl"
-          >
-            <p className="text-white font-bold text-sm">🏆 Top SEO Expert</p>
-            <p className="text-[#94a3b8] text-xs mt-1">Clutch.co 2024</p>
-          </motion.div>
-        </motion.div>
+{/* Floating award badge */}
+<motion.div
+  animate={{ y: [0, 10, 0] }}
+  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+  className="absolute left-1 bottom-4 sm:left-2 sm:bottom-8 lg:-left-8 lg:bottom-12 bg-[#08142f]/95 backdrop-blur-md border border-[#facc15]/20 rounded-2xl p-2 sm:p-3 lg:p-4 shadow-xl"
+>
+  <p className="text-white font-bold text-xs sm:text-sm">
+    🏆 Top SEO Expert
+  </p>
+  <p className="text-[#94a3b8] text-[10px] sm:text-xs mt-1">
+    Clutch.co 2024
+  </p>
+</motion.div>
+</motion.div>
 
         {/* Right content */}
         <div className="flex flex-col gap-6">
