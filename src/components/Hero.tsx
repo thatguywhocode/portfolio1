@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
           {/* Profile image */}
           <div className="relative z-10 w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#2563eb]/40 shadow-2xl shadow-blue-500/30">
             <img
-              src="../../public/akhil.jpeg"
+              src="/akhil.jpeg"
               alt="Royal Butola, SEO Specialist"
               width={320}
               height={320}
